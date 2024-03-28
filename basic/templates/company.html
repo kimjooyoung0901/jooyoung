@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- title -->
+  <title>Interior Design</title>
+  <!-- tailwind cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- font library -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="fixed top-0 w-screen bg-gray-400 lg:hidden z-10">
+    <div class="flex items-center h-16">
+      <button id="open-btn" class="h-full px-4 text-2xl bg-gray-200 hover:text-black">
+        &#9776;
+      </button>
+      <h1 class="ml-4 text-2xl text-white font-semibold">Company Name</h1>
+    </div>
+  </header>
+
+  <!-- SIDE BAR -->
+  <nav id="sideBar" class="fixed w-80 top-0 -left-80 h-screen bg-gray-400 px-4 lg:left-0 transition-all z-30">
+    <div class="mt-12 h-48 px-4 flex flex-col justify-center">
+      <h2 class="text-2xl text-white font-semibold">Company <br> Name</h2>
+    </div>
+    <ul>
+      <li class="">
+        <a href="#" class="block text-lg font-semibold text-white px-4 py-2 hover:bg-gray-200 hover:text-black">Home</a>
+      </li>
+      <li class="">
+        <a href="#showcase" class="block text-lg font-semibold text-white px-4 py-2 hover:bg-gray-200 hover:text-black">Showcase</a>
+      </li>
+      <li class="">
+        <a href="#services" class="block text-lg font-semibold text-white px-4 py-2 hover:bg-gray-200 hover:text-black">Services</a>
+      </li>
+      <li class="">
+        <a href="#designers" class="block text-lg font-semibold text-white px-4 py-2 hover:bg-gray-200 hover:text-black">Designers</a>
+      </li>
+      <li class="">
+        <a href="#packages" class="block text-lg font-semibold text-white px-4 py-2 hover:bg-gray-200 hover:text-black">Packages</a>
+      </li>
+      <li class="">
+        <a href="#contact" class="block text-lg font-semibold text-white px-4 py-2 hover:bg-gray-200 hover:text-black">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- OVERLAY -->
+  <div id="nav-overlay" class="fixed inset-0 bg-black/80 z-20 hidden"></div>
+
+  <!-- MAIN -->
+  <main class="mt-24 max-w-screen-lg mx-auto px-4 lg:ml-80">
+    <h1 class="text-7xl font-semibold my-8">Interior Design</h1>
+
+    <!-- SHOWCASE -->
+    <div id="showcase">
+      <h2 class="text-gray-400 text-5xl font-semibold my-8">Showcase.</h2>
+      <div class="w-16 border-t-8 border-t-gray-400 rounded"></div>
+    </div>
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div id="col-1" class="">
+        <img 
+          class="cursor-pointer opacity-80 hover:opacity-100"
+          src="https://www.w3schools.com/w3images/kitchenconcrete.jpg" 
+          alt="kitchenconcrete"
+          onclick="openModal(this)"
+        >
+        <img 
+          class="mt-4 cursor-pointer opacity-80 hover:opacity-100"
+          src="https://www.w3schools.com/w3images/livingroom.jpg" 
+          alt="livingroom"
+          onclick="openModal(this)"
+        >
+        <img 
+          class="mt-4 cursor-pointer opacity-80 hover:opacity-100"
+          src="https://www.w3schools.com/w3images/diningroom.jpg" 
+          alt="diningroom"
+          onclick="openModal(this)"
+        >
+      </div>
+
+      <div id="col-2" class="">
+        <img 
+          class="cursor-pointer opacity-80 hover:opacity-100" 
+          src="https://www.w3schools.com/w3images/atrium.jpg"
+          alt="atrium"
+          onclick="openModal(this)"
+        >
+        <img 
+          class="mt-4 cursor-pointer opacity-80 hover:opacity-100"
+          src="https://www.w3schools.com/w3images/bedroom.jpg" 
+          alt="bedroom"
+          onclick="openModal(this)"
+        >
+        <img
+          class="mt-4 cursor-pointer opacity-80 hover:opacity-100"
+          src="https://www.w3schools.com/w3images/livingroom2.jpg" 
+          alt="livingroom2"
+          onclick="openModal(this)"
+        >
+      </div>
+    </div>
+
+    <!-- MODAL IMAGE -->
+    <div id="modal-overlay" class="fixed inset-0 bg-black/80 z-40 hidden">
+      <img id="modal" class="block mt-20 mx-auto px-4" src="" alt="">
+    </div>
+
+    <!-- DESIGNERS -->
+    <div id="designers" class="mt-24">
+      <h2 class="text-gray-400 text-5xl my-8 font-semibold">Designer.</h2>
+      <div class="w-16 border-t-8 border-t-gray-400 rounded"></div>
+    </div>
+
+    <p class="my-4">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+      Cum quae officia cumque. Assumenda temporibus autem est 
+      animi vero adipisci dolorum placeat, quos neque reiciendis, 
+      dicta pariatur nesciunt ea molestiae natus?
+    </p>
+
+    <ul class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <li class="bg-gray-100">
+        <img class="w-full" src="https://www.w3schools.com/w3images/team2.jpg" alt="John Doe">
+        <div class="px-4 pb-4">
+          <h3 class="text-2xl my-4 font-semibold tracking-wide">John Doe</h3>
+          <p class="my-4 text-gray-400">CEO & Founder</p>
+          <p class="my-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          </p>
+          <button class="w-full p-2 text-white bg-gray-400 hover:bg-gray-500">Contact</button>
+        </div>
+      </li>
+
+      <li class="bg-gray-100">
+        <img class="w-full" src="https://www.w3schools.com/w3images/team1.jpg" alt="Jane Doe">
+        <div class="px-4 pb-4">
+          <h3 class="text-2xl my-4 font-semibold tracking-wide">Jane Doe</h3>
+          <p class="my-4 text-gray-400">Designer</p>
+          <p class="my-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          </p>
+          <button class="w-full p-2 text-white bg-gray-400 hover:bg-gray-500">Contact</button>
+        </div>
+      </li>
+
+      <li class="bg-gray-100">
+        <img class="w-full" src="https://www.w3schools.com/w3images/team3.jpg" alt="Mike Ross">
+        <div class="px-4 pb-4">
+          <h3 class="text-2xl my-4 font-semibold tracking-wide">Mike Ross</h3>
+          <p class="my-4 text-gray-400">Architect</p>
+          <p class="my-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          </p>
+          <button class="w-full p-2 text-white bg-gray-400 hover:bg-gray-500">Contact</button>
+        </div>
+      </li>
+    </ul>
+
+    <!-- PACKAGES -->
+    <div id="packages" class="mt-24">
+      <h2 class="text-gray-400 text-5xl my-8 font-semibold">Packages</h2>
+      <div class="w-16 border-t-8 border-t-gray-400 rounded"></div>
+    </div>
+
+    <p class="my-4">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+      Praesentium, fuga libero cupiditate pariatur blanditiis soluta sit, 
+      ullam voluptates consequatur aspernatur minima iure est dolores 
+      voluptatibus facere maxime dignissimos eius asperiores.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <ul class="bg-gray-100">
+        <li class="bg-gray-600 p-8">
+          <h3 class="text-2xl text-white text-center">Basic</h3>
+        </li>
+        <li class="text-center p-4 border-b">Floorplanning</li>
+        <li class="text-center p-4 border-b">10 hours support</li>
+        <li class="text-center p-4 border-b">Photography</li>
+        <li class="text-center p-4 border-b">20% furniture discount</li>
+        <li class="text-center p-4 border-b">Good deals</li>
+        <li class="p-4 border-b">
+          <span class="block text-center text-3xl my-4">$ 199</span>
+          <span class="block text-center text-gray-400">per room</span>
+        </li>
+        <li class="p-4 text-center">
+          <button class="px-4 py-2 text-white bg-gray-600 hover:bg-gray-700">
+            Sign Up
+          </button>
+        </li>
+      </ul>
+
+      <ul class="bg-gray-100">
+        <li class="bg-red-600 p-8">
+          <h3 class="text-2xl text-white text-center">Pro</h3>
+        </li>
+        <li class="text-center p-4 border-b">Floorplanning</li>
+        <li class="text-center p-4 border-b">10 hours support</li>
+        <li class="text-center p-4 border-b">Photography</li>
+        <li class="text-center p-4 border-b">50% furniture discount</li>
+        <li class="text-center p-4 border-b">GREAT deals</li>
+        <li class="p-4 border-b">
+          <span class="block text-center text-3xl my-4">$ 249</span>
+          <span class="block text-center text-gray-400">per room</span>
+        </li>
+        <li class="p-4 text-center">
+          <button class="px-4 py-2 text-white bg-red-600 hover:bg-red-700">
+            Sign Up
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="mt-24">
+      <h2 class="text-gray-400 text-5xl my-8 font-semibold">Contact.</h2>
+      <div class="w-16 border-t-8 border-t-gray-400 rounded"></div>
+    </div>
+
+    <p class="my-4">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+      Incidunt quasi dolore dolor illum suscipit architecto officia earum beatae! 
+    </p>
+
+    <ul class="my-12 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <li class="flex flex-col items-center p-4 border-2">
+        <svg class="h-8 fill-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+        </svg>
+        <p class="mt-8 text-center">
+          032 123 4567 <br>
+          010 1234 5678
+        </p>
+      </li>
+
+      <li class="flex flex-col items-center p-4 border-2">
+        <svg class="h-8 fill-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+          <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+        </svg>
+        <p class="mt-8 text-center">
+          Gyeongwon-Daero <br>
+          Bupyeong-gu <br>
+          Incheon, KR
+        </p>
+      </li>
+
+      <li class="flex flex-col items-center p-4 border-2">
+        <svg class="h-8 fill-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/>
+        </svg>
+        <p class="mt-8 text-center">
+          interior_1@company.com <br>
+          interior_2@company.com 
+        </p>
+      </li>
+    </ul>
+
+    <img class="w-full" src="https://www.w3schools.com/w3images/map.jpg" alt="">
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-24 p-12 bg-gray-200">
+    <p class="text-right">
+      Powered by <a href="#" class="underline">Me</a>
+    </p>
+  </footer>
+
+  <script>
+    // NavBar
+    var openBtn = document.getElementById("open-btn");
+    var navOverlay = document.getElementById("nav-overlay");
+    var sideBar = document.getElementById("sideBar");
+
+    openBtn.addEventListener('click', function () {
+      // replace(클래스A, 클래스B) - 클래스 A를 클래스B로 대체한다
+      sideBar.classList.replace('-left-80', 'left-0');
+      navOverlay.classList.remove('hidden');
+    })
+
+    navOverlay.addEventListener('click', function () {
+      sideBar.classList.replace('left-0', '-left-80');
+      this.classList.add('hidden');
+    })
+
+    // Modal 
+    var modalOverlay = document.getElementById("modal-overlay");
+
+    function openModal(img) {
+      modal.src = img.src;
+      modal.alt = img.alt;
+      modalOverlay.classList.remove('hidden');
+    }
+
+    modalOverlay.addEventListener('click', function () {
+      this.classList.add('hidden');
+    })
+  </script>
+  
+</body>
+</html>

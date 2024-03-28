@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript와 HTML</title>
+</head>
+<body>
+
+  <!-- <h1>스크립트 쓰기/디버깅</h1>
+  <p>script태그에 자바스크립트 코드를 작성한다</p>
+
+  <script>
+    console.log("hello script!");
+  </script> -->
+
+
+  <!-- <h1>DOM</h1>
+  <pre>
+    Document Object Model(문서 객체 모델)의 약자.
+    문서의 모든 엘리먼트가 객체라는 것을 의미한다
+  </pre>
+
+  <input type="text" id="input">
+
+  <script>
+    // input 엘리먼트에 접근
+    var input = document.getElementById("input");
+
+    console.log(input); // 접근 성공
+
+    // 메서드 호출
+    input.focus();
+    // focus - 문서가 처음 열렸을 때 input에 커서를 위치시킨다
+  </script> -->
+
+
+  <!-- <h1>window 객체</h1>
+  <pre>
+    뷰 개발을 위한 도구모음
+    다양한 속성과 함수를 제공한다
+  </pre>
+
+  <script>
+    console.log(window);
+  </script> -->
+
+
+  <!-- <button onclick="f()">클릭</button>
+
+  <script>
+    function f() {
+      // 윈도우 객체의 메서드. window는 생략 가능
+      alert("lol");
+      // window.alert("lol")와 같다
+    }
+  </script> -->
+
+
+  <!-- <h1>id 선택자</h1>
+  <p>id로 엘리먼트를 선택한다</p>
+
+  <ul>
+    <li id="foo">foo</li>
+    <li>bar</li>
+    <li>baz</li>
+  </ul>
+
+  <script>
+    // document.getElementById(id)
+    var foo = document.getElementById("foo");
+
+    console.log(foo);
+  </script> -->
+
+
+  <!-- <h1>class 선택자</h1>
+  <p>클래스로 엘리먼트를 선택한다</p>
+
+  <ul>
+    <li class="item">foo</li>
+    <li class="item">bar</li>
+    <li class="item">baz</li>
+  </ul>
+
+  <script>
+    // document.getElementsByClassName(class)
+    var items = document.getElementsByClassName("item");
+
+    // HTMLCollections - 배열과 비슷하다
+    console.log(items) 
+
+    // 각 엘리먼트에 접근하기
+    console.log(items[0]); // foo
+    console.log(items[1]); // bar
+    console.log(items[2]); // baz
+
+    // 리스트에 포함된 엘리먼트의 갯수 구하기
+    console.log(items.length); // 3
+  </script> -->
+
+
+  <!-- <h1>Q. 선택자</h1>
+  <p>모든 브랜드를 한번에 선택하고 그 중에서 현대 자동차에 접근해보세요</p>
+
+  <ul>
+    <li class="brand">Audi</li>
+    <li class="brand">Volvo</li>
+    <li class="brand">Hyundai</li>
+    <li class="brand">Toyota</li>
+  </ul>
+
+  <script>
+    // 복수
+    var brands = document.getElementsByClassName("brand");
+
+    // HTMLCollection
+    console.log(brands);
+
+    // 현대차에 접근
+    console.log(brands[2]);
+  </script> -->
+
+
+  <!-- <h1>textContent</h1>
+  <p>엘리먼트의 텍스트를 저장한다</p>
+
+  <p id="song">내가 만든 &#127850; ~</p>
+
+
+  <script>
+    var song = document.getElementById("song");
+
+    // 텍스트에 접근
+    console.log(song.textContent);
+
+    // 텍스트 업데이트
+    song.textContent = "널 위해 구웠찌~";
+  </script> -->
+
+
+  <!-- <h1>innerHTML</h1>
+  <p>엘리먼트 내부의 트리를 문자열 타입으로 저장한다</p>
+
+  <ul id="list">
+    <li>Staria</li>
+    <li>Avante</li>
+    <li>Casper</li>
+  </ul>
+
+  <script>
+    var list = document.getElementById("list");
+
+    // 트리에 접근
+    console.log(list.innerHTML);
+    console.log(typeof list.innerHTML); // string
+
+
+    // 외제차 리스트로 업데이트
+    // 백틱 (`): 문자열에서 줄바꿈을 할 수 있다
+    list.innerHTML = `
+      <li>Audi</li>
+      <li>Volvo</li>
+      <li>Lexus</li>
+    `
+  </script> -->
+
+
+  <!-- <h1>classList</h1>
+  <pre>
+    엘리먼트의 클래스 리스트를 저장한다
+    클래스 조작을 위한 몇개의 메서드를 가지고있다
+  </pre>
+
+  <style>
+    .text-italic {
+      font-style: italic;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+    
+    .font-bold {
+      font-weight: bold;
+    }
+  </style>
+  
+  <ul>
+    <li id="foo" class="font-bold text-italic">foo</li>
+    <li>bar</li>
+    <li>baz</li>
+  </ul>
+
+
+  <script>
+    var foo = document.getElementById("foo");
+
+    // DOMTokenList - 배열과 비슷
+    console.log(foo.classList);
+
+    // classList에 새 클래스 추가
+    foo.classList.add("underline");
+
+    // classList에서 클래스 제거
+    foo.classList.remove("font-bold");
+
+    // 특정 클래스를 포함하는지 체크
+    console.log(foo.classList.contains("font-bold"));
+  </script> -->
+
+
+  <!-- <h1>애트리뷰트</h1>
+
+  <label for="input">Password</label>
+  <input 
+    type="password" 
+    id="input"
+    name="password" 
+    value="12345"
+    style="outline: none"
+  >
+
+
+  <script>
+     var input = document.getElementById('input');
+    
+    // 애트리뷰트에 접근
+    console.log("type:", input.type)
+    console.log("id:", input.id)
+    console.log("name:", input.name)
+    console.log("value:", input.value)
+    console.log("style outline:", input.style.outline);
+
+    // 애트리뷰트 업데이트
+    input.type = "text";
+  </script> -->
+
+
+  <!-- <h1>createElement</h1>
+  <p>새 엘리먼트를 생성한다</p>
+
+  <ul id="list">
+    <li>foo</li>
+    <li>bar</li>
+  </ul>
+
+  <script>
+    var list = document.getElementById("list");
+
+    // document.createElement(생성할 엘리먼트)
+    var li = document.createElement("li");
+
+    // 엘리먼트에 텍스트 할당
+    li.textContent = "baz";
+
+    // 리스트에 마지막 아이템으로 추가
+    list.appendChild(li);
+  </script> -->
+
+
+  <!-- <h1>Q. classList</h1>
+  <p>자바스크립트를 활용하여 모든 아이템에 줄을 그어보세요</p>
+
+  <style>
+    .line-through {
+      text-decoration: line-through;
+    }
+  </style>
+
+
+  <ul>
+    <li class="item">list item</li>
+    <li class="item">list item</li>
+    <li class="item">list item</li>
+    <li class="item">list item</li>
+  </ul>
+
+  <script>
+    var items = document.getElementsByClassName("item");
+
+    for (var i = 0; i < items.length; i++) {
+      items[i].classList.add("line-through");
+    }
+  </script> -->
+
+
+  <!-- <h1>이벤트와 이벤트 처리</h1>
+  <pre>
+    이벤트 - 웹페이지에서 발생하는 일들
+    예) 클릭, 스크롤, 마우스의 움직임, 터치 등
+  </pre>
+
+
+  <button id="btn">click me</button>
+
+  <script>
+    var btn = document.getElementById("btn");
+
+    // element.addEventListener(event, eventHandler)
+    // event가 발생했을 때 eventHandler가 호출된다
+    btn.addEventListener('click', handleClick);
+
+    function handleClick() {
+      alert('lol');
+    }
+  </script> -->
+
+
+  <!-- <h1>이벤트 애트리뷰트</h1>
+  <pre>
+    이벤트 애트리뷰트로도 이벤트를 처리할 수 있다
+
+    구조
+    onEvent="eventHandler()"
+  </pre>
+
+
+  <button onclick="handleClick()">button</button>
+
+  <script>
+    function handleClick() {
+      alert("lol");
+    }
+  </script> -->
+
+
+  <!-- <h1>이벤트 객체</h1>
+  <p>
+    발생한 이벤트와 관련된 정보를 저장한다
+  </p>
+
+  <button id="btn">click me</button>
+
+  <script>
+    var btn = document.getElementById("btn");
+
+    btn.addEventListener("click", handleClick);
+
+    function handleClick(e) {
+      // e: 이벤트 객체
+      console.log(e);
+    }
+  </script> -->
+
+
+  <!-- <h1>event</h1>
+
+  <p id="message">너에게 할 말이 있어. 나 사실..</p>
+  <button id="btn">눌러줄래?</button>
+
+  <script>
+    var message = document.getElementById("message");
+    var btn = document.getElementById("btn");
+
+    // 익명함수를 콜백으로 사용 - 간단한 코드
+    btn.addEventListener("click", function () {
+      message.textContent = "ㅗ";
+    })
+  </script> -->
+
+
+
+  <h1>localStorage</h1>
+  <pre>
+    브라우저가 제공하는 저장공간
+    클라이언트측 데이터를 저장할 때 사용된다
+
+    예) 로그인 토큰 저장, 테마 저장, 쇼핑 카트 등
+  </pre>
+
+  <script>
+    /*
+      localStorage의 메서드
+
+      1 setItem
+      로컬스토리지에 데이터를 저장한다
+
+      2 getItem
+      로컬스토리지에서 데이터를 가져온다
+      
+      3 removeItem
+      로컬스토리지에서 데이터를 삭제한다
+    */
+
+
+    // setItem(key, value)
+    localStorage.setItem("email", "bunny@example.com");
+
+
+    // getItem(key)
+    var email = localStorage.getItem("email");
+
+    
+    // removeItem(key)
+    localStorage.removeItem("email");
+    
+    console.log(email);
+
+  </script>
+  
+</body>
+</html>

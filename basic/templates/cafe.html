@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- title -->
+  <title>the Cafe</title>
+  <!-- tailwind cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- font library -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <style>
+    body {
+      font-family: "Inconsolata", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 p-2 w-full z-10 bg-black">
+    <ul class="flex">
+      <li class="w-1/4">
+        <a href="#" class="block p-2 text-center text-white hover:bg-white hover:text-black">HOME</a>
+      </li>
+      <li class="w-1/4">
+        <a href="#about" class="block p-2 text-center text-white hover:bg-white hover:text-black">ABOUT</a>
+      </li>
+      <li class="w-1/4">
+        <a href="#menu" class="block p-2 text-center text-white hover:bg-white hover:text-black">MENU</a>
+      </li>
+      <li class="w-1/4">
+        <a href="#where" class="block p-2 text-center text-white hover:bg-white hover:text-black">WHERE</a>
+      </li>
+    </ul>
+  </nav>
+
+
+   <!-- MAIN IMAGE -->
+   <div class="h-[500px] bg-[url('https://www.w3schools.com/w3images/coffeehouse.jpg')] bg-cover bg-center grayscale-[50%]">
+    <div class="h-[450px] flex flex-col justify-center">
+      <h1 class="text-8xl text-center text-white">
+        the <br>
+        <span class="inline-block mt-8">
+          Cafe
+        </span>
+      </h1>
+    </div>
+    <div class="px-8 flex justify-between opacity-0 md:opacity-100">
+      <span class="bg-black text-sm text-white px-2">Open from 6am to 5pm</span>
+      <span class="text-sm text-white">15 Adr street, 5015</span>
+    </div>
+  </div>
+
+
+  <!-- MAIN -->
+  <main class="max-w-screen-sm mx-auto px-4">
+    <!-- ABOUT -->
+    <div id="about" class="py-16">
+      <h1 class="text-2xl text-center tracking-widest">
+        <span class="bg-black text-white px-2">ABOUT THE CAFE</span>
+      </h1>
+    </div>
+
+    <p class="text-lg my-4">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+      Eligendi corporis harum minus accusamus sed magnam quis iusto 
+      pariatur amet sint repellendus asperiores delectus 
+      a cupiditate sapiente tempore vel, omnis sunt.
+    </p>
+
+    <div class="mt-8 px-4 py-2 bg-gray-200 border-l-8 border-l-gray-300">
+      <p class="my-4 text-lg italic">
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, maiores obcaecati nihil ex porro vel at consequatur amet reprehenderit soluta laboriosam eveniet adipisci error odit similique accusantium, voluptatem repudiandae eaque."
+      </p>
+      <p class="my-4 text-lg">
+        Chef, Coffeeist and Owner: Liam Brown
+      </p>
+    </div>
+
+    <img class="mt-8 grayscale-[80%]" src="https://www.w3schools.com/w3images/coffeeshop.jpg" alt="">
+
+    <p class="my-4 text-lg">
+      <span class="font-semibold">Opening hours:</span> everyday from 6am to 5pm.
+    </p>
+
+    <p class="my-4 text-lg">
+      <span class="font-semibold">Address:</span> 15 Adr street, 5015, NY
+    </p>
+
+    <!-- MENU -->
+    <div id="menu" class="py-16">
+      <h1 class="text-2xl text-center tracking-widest">
+        <span class="bg-black text-white px-2">THE MENU</span>
+      </h1>
+    </div>
+
+    <div class="bg-white shadow-lg p-4">
+      <div class="flex">
+        <input type="radio" name="menu" id="eat" class="hidden peer/eat" checked>
+        <label for="eat" class="w-1/2 p-1 font-semibold text-center peer-checked/eat:bg-gray-200" onclick="toggleMenu('eat')">
+          Eat
+        </label>
+        <input type="radio" name="menu" id="drink" class="hidden peer/drink">
+        <label for="drink" class="w-1/2 p-1 font-semibold text-center peer-checked/drink:bg-gray-200" onclick="toggleMenu('drink')">
+          Drink
+        </label>
+      </div>
+
+      <!-- MENU: Eat -->
+      <div class="item eat w-full pt-4">
+        <h3 class="my-4 text-xl font-semibold">Bread Basket</h3>
+        <p class="my-4 text-lg text-gray-500">Assortment of fresh baked fruit breads and muffins 5.50</p>
+        <h3 class="my-4 text-xl font-semibold">Honey Almond Granola with Fruits</h3>
+        <p class="my-4 text-lg text-gray-500">
+          Natural cereal of honey toasted oats, raisins, almonds and dates 7.00
+        </p>
+        <h3 class="my-4 text-xl font-semibold">Belgian Waffle</h3>
+        <p class="my-4 text-lg text-gray-500">
+          Vanilla flavored batter with malted flour 7.50
+        </p>
+        <h3 class="my-4 text-xl font-semibold">Scrambled eggs</h3>
+        <p class="my-4 text-lg text-gray-500">
+          Scrambled eggs, roasted red pepper and garlic, with green onions 7.50
+        </p>
+        <h3 class="my-4 text-xl font-semibold">Blueberry Pancakes</h3>
+        <p class="my-4 text-lg text-gray-500">
+          With syrup, butter and lots of berries 8.50
+        </p>
+      </div>
+
+      <!-- MENU: Drink -->
+      <div class="item drink w-full pt-4 hidden">
+        <h3 class="my-4 text-xl font-semibold">Coffee</h3>
+        <p class="my-4 text-lg text-gray-500">
+          Regular coffee 2.50
+        </p>
+        <h3 class="text-xl font-semibold my-4">Chocolato</h3>
+        <p class="my-4 text-lg text-gray-500">
+          Chocolate espresso with milk 4.50
+        </p>
+        <h3 class="my-4 text-xl font-semibold">Corretto</h3>
+        <p class="my-4 text-lg text-gray-500">
+          Whiskey and coffee 5.00
+        </p>
+        <h3 class="my-4 text-xl font-semibold">Iced tea</h3>
+        <p class="my-4 text-lg text-gray-500">
+          Hot tea, except not hot 3.00
+        </p>
+        <h3 class="my-4 text-xl font-semibold">Soda</h3>
+        <p class="my-4 text-lg text-gray-500">
+          Coke, Sprite, Fanta, etc. 2.50
+        </p>
+      </div>
+    </div>
+
+    <img class="mt-8 grayscale-[80%]" src="https://www.w3schools.com/w3images/coffeehouse2.jpg" alt="">
+
+     <!-- WHERE -->
+     <div id="where" class="py-16">
+      <h1 class="text-2xl text-center tracking-widest">
+        <span class="bg-black text-white px-2">WHERE TO FIND US</span>
+      </h1>
+    </div>
+
+    <img class="mt-4 grayscale-[80%]" src="https://www.w3schools.com/w3images/map.jpg" alt="">
+
+    <p class="my-4 text-lg">
+      <span class="bg-black text-white px-2 py-1">FYI!</span>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Dignissimos assumenda consectetur ipsa consequatur! 
+      Inventore rerum incidunt nisi eligendi commodi! 
+      Corrupti error veritatis quae voluptatem debitis 
+      excepturi quibusdam accusantium fugit hic.
+    </p>
+
+    <form action="" id="form" class="">
+      <div class="mb-4">
+        <input type="text" class="border text-lg p-4 w-full" placeholder="Name" required>
+      </div>
+      <div class="mb-4">
+        <input type="number" class="border text-lg p-4 w-full" placeholder="How many people" required>
+      </div>
+      <div class="mb-4">
+        <input type="date" class="border text-lg p-4 w-full" value="2023-01-16" required>
+      </div>
+      <div class="mb-4">
+        <input type="text" class="border text-lg p-4 w-full" placeholder="Message / Special requirements" required>
+      </div>
+
+      <button class="text-lg text-white px-4 py-2 bg-black">
+        SEND MESSAGE
+      </button>
+    </form>
+
+    <p id="done" class="text-lg text-center py-20 hidden">
+      Thank you and we'll contact with you soon!
+    </p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-16 bg-gray-200 py-16">
+    <p class="text-center text-lg">
+      Powered by <a href="#" class="underline">Me</a>
+    </p>
+  </footer>
+
+  <script>
+    // Menu
+    var items = document.getElementsByClassName("item");
+  
+    function toggleMenu(filter) {
+      for (var i = 0; i < items.length; i++) {
+        if (items[i].classList.contains(filter)) {
+          items[i].classList.remove("hidden");
+        } else {
+          items[i].classList.add("hidden");
+        }
+      }
+    }
+    
+    // Form
+    var form = document.getElementById("form");
+  
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+  
+      this.classList.add("hidden");
+      done.classList.remove("hidden");
+    })
+  </script>
+
+  
+</body>
+</html>
